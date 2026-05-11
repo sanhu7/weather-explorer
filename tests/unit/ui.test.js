@@ -12,4 +12,11 @@ describe('renderWeatherCard', () => {
         const result = document.getElementById('weather-result')
         expect(result.innerHTML).toContain('Stockholm')
     });
+
+    it('should display the temperature', () => {
+        renderWeatherCard({ city: 'Stockholm', temperature: 20, windSpeed: 5 })
+
+        const result = document.getElementById('weather-result')
+        expect(result.innerHTML).toContain('Temperature: 20°C')
+    });
 })
