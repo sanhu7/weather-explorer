@@ -7,7 +7,7 @@ const CALM_MAX = 5
 const BREEZY_MAX = 20
 const WINDY_MAX = 40
 
-
+//weathe logic functions
 export function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - FREEZING_POINT_F) * CONVERSION_FACTOR;
 }
