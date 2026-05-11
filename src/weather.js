@@ -5,7 +5,6 @@ const COLD_MAX = 15
 const WARM_MAX = 25
 
 
-
 export function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - FREEZING_POINT_F) * CONVERSION_FACTOR;
 }
@@ -15,4 +14,11 @@ export function getWeatherDescription(celsius) {
     if (celsius < COLD_MAX) return "Cold"
     if (celsius < WARM_MAX) return "Warm"
     return "Hot"
+}
+
+export function getWindDescription(windSpeed) {
+    if (windSpeed <= 5) return "Calm"
+    if (windSpeed <= 20) return "Breezy"
+    if (windSpeed <= 40) return "Windy"
+    return "Stormy"
 }
