@@ -19,4 +19,11 @@ describe('renderWeatherCard', () => {
         const result = document.getElementById('weather-result')
         expect(result.innerHTML).toContain('Temperature: 20°C')
     });
+
+    it('should display the weather description', () => {
+        renderWeatherCard({ city: 'Stockholm', temperature: 20, windSpeed: 5 })
+
+        const result = document.getElementById('weather-result')
+        expect(result.innerHTML).toContain('Warm')
+    });
 })
