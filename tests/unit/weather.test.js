@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { fahrenheitToCelsius, getWeatherDescription } from '../../src/weather.js'
+import { fahrenheitToCelsius, getWeatherDescription, getWindDescription } from '../../src/weather.js'
 
 describe('fahrenheitToCelsius', () => {
     it('should convert 32°F to 0°C', () => {
@@ -32,3 +32,21 @@ describe("getWeatherDescription", () => {
         expect(getWeatherDescription(30)).toBe("Hot");
     });
 })
+
+describe("getWindDescription", () => {
+    it('should returns "Calm" for wind speed 0-5 mph', () => {
+        expect(getWindDescription(3)).toBe("Calm");
+    });
+
+    it('should returns "Breezy" for wind speed 6-20 mph', () => {
+        expect(getWindDescription(15)).toBe("Breezy");
+    });
+
+    it('should returns "Windy" for wind speed 21-40 mph', () => {
+        expect(getWindDescription(30)).toBe("Windy");
+    });
+
+    it('should returns "Stormy" for wind speed above 40 mph', () => {
+        expect(getWindDescription(45)).toBe("Stormy");
+    });
+});
