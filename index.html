@@ -9,19 +9,23 @@
 </head>
 
 <body>
-    <h1>Weather Explorer 🌤️</h1>
+    <div class="container">
+        <h1>Weather Explorer 🌤️</h1>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a>
-    </nav>
 
-    <form id="weather-form">
-        <input type="text" name="city" placeholder="Enter city..." />
-        <button type="submit">Search</button>
-    </form>
+        <nav>
+            <a href="index.html">Home</a>
+            <span class="nav-divider">|</span>
+            <a href="about.html">About</a>
+        </nav>
 
-    <div id="weather-result"></div>
+        <form id="weather-form">
+            <input type="text" name="city" placeholder="Enter city..." />
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="weather-result"></div>
+    </div>
 
     <script type="module" src="./src/main.js"></script>
 </body>

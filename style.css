@@ -10,7 +10,10 @@ body {
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     background: linear-gradient(180deg, #87CEEB 0%, #b8e4f7 50%, #e0f4ff 100%);
-    padding: 2rem;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body::before {
@@ -25,36 +28,51 @@ body::before {
     z-index: 0;
 }
 
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
 h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #fff;
+    color: #1a4a7a;
     text-shadow: 0 2px 8px rgba(0, 80, 160, 0.18);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 1;
 }
 
 nav {
-    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
     position: relative;
     z-index: 1;
 }
 
 nav a {
-    color: #fff;
+    color: #4a90c4;
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
-    margin-right: 0.5rem;
-    padding: 0.3rem 0.8rem;
+    margin-right: 1rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.5);
     transition: background 0.2s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
+    color: #2271a8;
+
+}
+
+.nav-divider {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1;
 }
 
 form {
@@ -177,4 +195,68 @@ main ul li::before {
     position: absolute;
     left: 0;
     font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 2rem 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .weather-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    nav {
+        margin-bottom: 2rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    form {
+        margin-bottom: 2rem;
+    }
+
+    .weather-card {
+        padding: 1.75rem;
+        margin-top: 0.5rem;
+    }
+
+    .weather-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .weather-card p {
+        font-size: 0.95rem;
+    }
 }
