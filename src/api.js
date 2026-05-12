@@ -9,7 +9,6 @@ export async function fetchCoordinates(city) {
         name: location.name,
     }
 }
-
 export async function fetchWeatherData(lat, lon) {
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
     const data = await response.json()
