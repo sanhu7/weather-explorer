@@ -9,16 +9,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Weather Explorer 🌤️</h1>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#f5a623" />
+                    <circle cx="18" cy="18" r="10" fill="#FFD700" />
+                    <path
+                        d="M18 4v4M18 28v4M4 18h4M28 18h4M7.5 7.5l2.8 2.8M25.7 25.7l2.8 2.8M7.5 28.5l2.8-2.8M25.7 10.3l2.8-2.8"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <h1>Weather Explorer</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
         <p class="subtitle">Search for current weather in any city in the world</p>
 
-
-        <nav>
-            <a href="index.html">Home</a>
-            <span class="nav-divider">|</span>
-            <a href="about.html">About</a>
-        </nav>
 
         <form id="weather-form">
             <input type="text" name="city" placeholder="Enter city..." list="city-suggestions" autocomplete="off" />
@@ -27,7 +38,13 @@
         </form>
 
         <div id="weather-result"></div>
-    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Weather Explorer — Built with Open-Meteo API</p>
+        </div>
+    </footer>
 
     <script type="module" src="./src/main.js"></script>
 </body>
