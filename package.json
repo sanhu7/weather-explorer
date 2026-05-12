@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "cypress:run": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "cypress": "^15.14.2",
     "jsdom": "^29.1.1",
     "vitest": "^4.1.5"
   }
