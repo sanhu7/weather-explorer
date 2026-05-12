@@ -5,5 +5,8 @@ const form = document.getElementById('weather-form')
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const city = e.target.city.value
+
+    const coords = await fetchCoordinates(city)
     console.log('Stad:', city)
+    console.log('Coördinaten:', coords)
 })
