@@ -1,11 +1,11 @@
-import {describe, it, expect} from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { fetchWeatherData, fetchCoordinates } from '../../src/api.js';
 
 describe('API Integration Tests', () => {
     it('should fetches coordinates for a city', async () => {
         const results = await fetchCoordinates('Stockholm')
-        expect(results).toHaveProperty('latitude')
-        expect(results).toHaveProperty('longitude')
+        expect(results).toHaveProperty('lat')
+        expect(results).toHaveProperty('lon')
     });
 
     it('should fetches weather data using coordinates', async () => {
