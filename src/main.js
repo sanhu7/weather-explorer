@@ -7,6 +7,6 @@ form.addEventListener('submit', async (e) => {
     const city = e.target.city.value
 
     const coords = await fetchCoordinates(city)
-    const weather = await fetchWeatherData(coords.latitude, coords.longitude)
-    console.log('Väder:', weather)
+    const weather = await fetchWeatherData(coords.lat, coords.lon)
+    renderWeatherCard({ ...weather, city: coords.name })
 })
