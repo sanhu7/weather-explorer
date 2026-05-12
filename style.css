@@ -130,3 +130,51 @@ button[type="submit"]:active {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
+
+main {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 80, 160, 0.12);
+    position: relative;
+    z-index: 1;
+}
+
+main h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1a6fa8;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+main h2:first-child {
+    margin-top: 0;
+}
+
+main p {
+    color: #2c5f8a;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    color: #2c5f8a;
+    font-weight: 600;
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+main ul li::before {
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
