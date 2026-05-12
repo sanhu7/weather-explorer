@@ -6,6 +6,13 @@
     padding: 0;
 }
 
+main ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
