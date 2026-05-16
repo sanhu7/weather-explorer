@@ -58,7 +58,7 @@ weather-explorer/
 
 1. **Klona projektet**
 ```bash
-git clone <din-repo-url>
+git clone https://github.com/sanhu7/weather-explorer.git
 cd weather-explorer
 ```
 
