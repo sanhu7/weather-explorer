@@ -168,4 +168,4 @@ https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_we
 
 ## 📄 Licens
 
-© 2026 Weather Explorer — Byggd med Open-Meteo API
+© 2026 Weather Explorer —Byggd med Open-Meteo API
